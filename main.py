@@ -92,75 +92,48 @@ def main():
     # Create the output directory if it doesn't exist
     os.makedirs(out_path, exist_ok=True)
     
-    for file in os.listdir(path):
-        if file.endswith('.csv'):
-            # Load the CSV file into a DataFrame
-            df = pd.read_csv(f"{path}{file}")
-
-            # Define the output filename for the visualization
-            output_file = f"{out_path}{file.replace('.csv', '.png')}"
-
-            # Check if the output file already exists
-            while not os.path.exists(output_file):
-                print(f"Generating code for {output_file}...")
-
-                # Generate a descriptive prompt based on the stock data
-                prompt = f"""
-                Read in the following stock data provided as a dictionary:
-                {df.to_dict(orient='records')}.
-
-                Use mplfinance library to generate a candlestick chart.
-                The data contains open, high, low, close, and volume columns for stock prices in a dataframe named data. The data also includes Simple momentum data. 
-                Your task is to generate a Python script that will plot this data using a candlestick chart style. Ensure that the file is saved using the variable output_file that will be defined elsewhere. 
-                Ensure to set up the matplotlib plot with appropriate axis labels. The title should include the stock name {file} and a prediction of 
-                short-term performance. Base the prediction on the Simple momentum data. 
-                """
-
-                # Get the generated code from the GPT model
-                generated_code = get_code(client, prompt)
-
-                if generated_code:
-                    # Process the generated code if necessary
-                    generated_code = process_text(generated_code)
-                    # Execute the generated code and create the chart
-                    execute_chart_code(df, generated_code, output_file)
-            else:
-                print(f"File {output_file} already exists. Skipping...")
-
-
-
 #    for file in os.listdir(path):
- #       if file.endswith('.csv'):
-  #          # Load the CSV file into a DataFrame
-   #         df = pd.read_csv(f"{path}{file}")
-#
- #           # Define the output filename for the visualization
-  #          output_file = f"{out_path}{file.replace('.csv', '.png')}"
-   #         print(output_file)
-    #        # Generate a descriptive prompt based on the stock data
-     #       prompt = f"""
-      #      Read in the following stock data provided as a dictionary:
-       #     {df.to_dict(orient='records')}.
-#
- #           Use matplotlib and mplfinance libraries to generate a candlestick chart.
-  #          The data contains open, high, low, close, and volume columns for stock prices in a dataframe. The data also includes Simple momentum data. 
-   #         Your task is to generate a Python script that will plot this data using a candlestick chart style. Ensure that the file is saved using the variable output_file that will be defined elsewhere. 
-    #        Ensure to set up the matplotlib plot with an appropriate axis labels. The title should include the stock name {file} and a prediction of 
-     #       short-term performance. Base the prediction on the Simple momentum data. 
-      #      """
-       #             
-            # Get the generated code from the GPT model
-        #    generated_code = get_code(client, prompt)
-#
- #           if generated_code:
-                #print(f"Generated code:\n{generated_code}")
-  #              generated_code = process_text(generated_code)
-   #             print(generated_code)
-#
-                # Execute the generated code and create the chart
- #               execute_chart_code(df, generated_code, output_file)
-            
-            
+#        if file.endswith('.csv'):
+#            # Load the CSV file into a DataFrame
+#            df = pd.read_csv(f"{path}{file}")
+            # Define the output filename for the visualization
+#            output_file = f"{out_path}{file.replace('.csv', '.png')}"
+            # Check if the output file already exists
+#            while not os.path.exists(output_file):
+#                print(f"Generating code for {output_file}...")
+                # Generate a descriptive prompt based on the stock data
+#                prompt = f"""
+#                Read in the following stock data provided as a dictionary:
+#                {df.to_dict(orient='records')}.
+#                Use mplfinance library to generate a candlestick chart.
+#                The data contains open, high, low, close, and volume columns for stock prices in a dataframe named data. The data also includes Simple momentum data. 
+#                Your task is to generate a Python script that will plot this data using a candlestick chart style. Ensure that the file is saved using the variable output_file that will be defined elsewhere. 
+#                Ensure to set up the matplotlib plot with appropriate axis labels. The title should include the stock name {file} and a prediction of 
+#                short-term performance. Base the prediction on the Simple momentum data. 
+#                """
+#                # Get the generated code from the GPT model
+#                generated_code = get_code(client, prompt)
+#                if generated_code:
+#                    # Process the generated code if necessary
+#                    generated_code = process_text(generated_code)
+#                    # Execute the generated code and create the chart
+#                    execute_chart_code(df, generated_code, output_file)
+#            else:
+#                print(f"File {output_file} already exists. Skipping...")
+    file = f"{path}test.svg"
+    print(file)    
+    with open(file, 'r') as file:
+        svg = file.read()
+    # Define the output filename for the visualization
+    prompt = f"""
+                Read in the following candlechart:
+                {svg}.
+                Add technical analysis lines to the chart showing the stock will go up. Please output only the lines that should be 
+                added to the revised svg
+                """
+    generated_code = get_code(client, prompt)
+    print(generated_code)   
+
 
 if __name__ == "__main__":
     main()
