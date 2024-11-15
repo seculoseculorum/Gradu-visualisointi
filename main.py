@@ -1,13 +1,11 @@
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-import mplfinance as mpf
 from dotenv import load_dotenv
 from openai import OpenAI
 import re
 from IPython.display import SVG, display
-import sys
-from io import StringIO
+
 
 def get_apikey():
     """
@@ -146,7 +144,6 @@ def createinputs():
     
     for file in files: 
         name = str(file)
-        name = name[:-4]
         df = pd.read_csv(f"{inputs}{file}")
         df = df.dropna()
         df['Date'] = pd.to_datetime(df['Date'])  # Removed origin and unit parameters
@@ -161,9 +158,11 @@ def createinputs():
 
         # Generate the SVG
         svg_code = create_svg(df)
+        namebase = f'{out}{name}'
+        namebase = namebase.replace(".csv", "")
 
         #Save to a file
-        with open(f'{out}{name}.svg', 'w') as file:
+        with open(f'{namebase}.svg', 'w') as file:
             file.write(svg_code)
 
 
@@ -173,9 +172,10 @@ def main():
     prompts = {
     "positive": f"""
                     In the end I will give you a svg-file with candlestick stock data.
-                    Add technical analysis lines to the chart showing the stock has a bullish (upward) breakout. Please output only the lines that should be added to the revised svg.
-                    Ensure that the resistance level (This is a price level where a stock has historically had difficulty moving above. When the price breaks above this level, it indicates a bullish breakout)
-                    and support levels (This is a price level where a stock has had difficulty falling below. A break below this level indicates a bearish breakout.) are added. 
+                    Add technical analysis lines to the chart showing the stock has a bullish (upward) breakout. 
+                    Please output only the lines that should be added to the revised svg.
+                    Ensure that the resistance level (This is a price level where a stock has historically had difficulty moving above)
+                    and support levels (This is a price level where a stock has had difficulty falling below) are added.  Please ensure that the lines and texts are not on top of each other and can be identified in the picture.
                     You can also add a trendline. Use the levels and the trendline to imply a breakout in accordance with the instruction. Please label the lines.
                     End any lines you make at the last candle which is located at x=600 and add a name for the line to the right of this. 
                     Read in the following candlechart:
@@ -186,8 +186,8 @@ def main():
                     Based on the data available add technical analysis lines to the chart. Depending on the data the lines can be bullish (upward), bearish (downward), or neutral. 
                     Please output only the lines that should be added to the revised svg.
                     Ensure that the resistance level (This is a price level where a stock has historically had difficulty moving above)
-                    and support levels (This is a price level where a stock has had difficulty falling below) are added. 
-                    You can also add a trendline. Use the levels and the trendline to illustrate potential breakout scenarios without favoring any specific direction. Please label the lines.
+                    and support levels (This is a price level where a stock has had difficulty falling below) are added. Please ensure that the lines and texts are not on top of each other and can be identified in the picture.
+                    Also add a trendline. Use the levels and the trendline to illustrate potential breakout scenarios without favoring any specific direction. Please label the lines.
                     End any lines you make at the last candle which is located at x=600 and add a name for the line to the right of this. 
 
                     Read in the following candlechart:
@@ -195,9 +195,11 @@ def main():
                     """,
     "negative": f"""
                     In the end I will give you a svg-file with candlestick stock data.
-                    Add technical analysis lines to the chart showing the stock has a bearish (downward) breakout. Please output only the lines that should be added to the revised svg.
-                    Ensure that the resistance level (This is a price level where a stock has historically had difficulty moving above. When the price breaks above this level, it indicates a bullish breakout)
-                    and support levels (This is a price level where a stock has had difficulty falling below. A break below this level indicates a bearish breakout.) are added. 
+                    Add technical analysis lines to the chart showing the stock has a bearish (downward) breakout. 
+                    Please output only the lines that should be added to the revised svg.
+                    Please output only the lines that should be added to the revised svg.
+                    Ensure that the resistance level (This is a price level where a stock has historically had difficulty moving above)
+                    and support levels (This is a price level where a stock has had difficulty falling below) are added.  Please ensure that the lines and texts are not on top of each other and can be identified in the picture.
                     You can also add a trendline. Use the levels and the trendline to imply a breakout in accordance with the instruction. Please label the lines.
                     End any lines you make at the last candle which is located at x=600 and add a name for the line to the right of this. 
                     Read in the following candlechart:
@@ -216,7 +218,7 @@ def main():
     
     files = os.listdir(in_path)
     for file in files: 
-        filebase = file[:4]
+        filebase = str(file)
         path = f"{in_path}{file}"
         
         with open(path, 'r') as file:
