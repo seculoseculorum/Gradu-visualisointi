@@ -1,0 +1,87 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="250" x2="40" y2="50" stroke="black" stroke-width="2" />
+  <line x1="35" y1="250.0" x2="40" y2="250.0" stroke="black" stroke-width="1" />
+  <text x="10" y="255.0" font-size="10" fill="black">75</text>
+  <line x1="40" y1="250.0" x2="780" y2="250.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="210.0" x2="40" y2="210.0" stroke="black" stroke-width="1" />
+  <text x="10" y="215.0" font-size="10" fill="black">85</text>
+  <line x1="40" y1="210.0" x2="780" y2="210.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="170.0" x2="40" y2="170.0" stroke="black" stroke-width="1" />
+  <text x="10" y="175.0" font-size="10" fill="black">95</text>
+  <line x1="40" y1="170.0" x2="780" y2="170.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="130.0" x2="40" y2="130.0" stroke="black" stroke-width="1" />
+  <text x="10" y="135.0" font-size="10" fill="black">105</text>
+  <line x1="40" y1="130.0" x2="780" y2="130.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="90.0" x2="40" y2="90.0" stroke="black" stroke-width="1" />
+  <text x="10" y="95.0" font-size="10" fill="black">115</text>
+  <line x1="40" y1="90.0" x2="780" y2="90.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="50.0" x2="40" y2="50.0" stroke="black" stroke-width="1" />
+  <text x="10" y="55.0" font-size="10" fill="black">125</text>
+  <line x1="40" y1="50.0" x2="780" y2="50.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="35" y1="150.0" x2="40" y2="150.0" stroke="black" stroke-width="1" />
+  <text x="10" y="155.0" font-size="10" fill="black">100</text>
+  <line x1="40" y1="150.0" x2="780" y2="150.0" stroke="lightgray" stroke-width="1" stroke-dasharray="5, 5" />
+  <line x1="48.666666666666664" y1="149.39717134245302" x2="48.666666666666664" y2="153.27869232552752" stroke="black" stroke-width="1" />
+  <rect x="40.86666666666667" y="149.7681428240204" width="15.6" height="1" fill="green" />
+  <line x1="66.0" y1="146.61488523069795" x2="66.0" y2="150.1854857407837" stroke="black" stroke-width="1" />
+  <rect x="58.199999999999996" y="146.98585671226533" width="15.6" height="2.6895432413632534" fill="green" />
+  <line x1="83.33333333333333" y1="141.86181312311612" x2="83.33333333333333" y2="150.0463714351959" stroke="black" stroke-width="1" />
+  <rect x="75.53333333333332" y="142.27915603987952" width="15.6" height="5.379086482726564" fill="green" />
+  <line x1="100.66666666666667" y1="140.03014143287737" x2="100.66666666666667" y2="145.12195687456534" stroke="black" stroke-width="1" />
+  <rect x="92.86666666666666" y="142.07048458149785" width="15.6" height="1.6925573846509678" fill="red" />
+  <line x1="118.0" y1="141.74588453512638" x2="118.0" y2="144.9455135636448" stroke="black" stroke-width="1" />
+  <rect x="110.19999999999999" y="142.32552747507538" width="15.6" height="1" fill="red" />
+  <line x1="135.33333333333331" y1="140.3547414792488" x2="135.33333333333331" y2="147.33364247623467" stroke="black" stroke-width="1" />
+  <rect x="127.53333333333332" y="140.4706700672386" width="15.6" height="1.7621145374449725" fill="red" />
+  <line x1="152.66666666666666" y1="139.9837699976814" x2="152.66666666666666" y2="142.55738465105497" stroke="black" stroke-width="1" />
+  <rect x="144.86666666666667" y="141.18942731277536" width="15.6" height="1" fill="red" />
+  <line x1="169.99999999999997" y1="139.89102712728965" x2="169.99999999999997" y2="145.36285648040808" stroke="black" stroke-width="1" />
+  <rect x="162.2" y="141.2126130303733" width="15.6" height="2.3417574773939123" fill="red" />
+  <line x1="187.33333333333331" y1="142.52677950382565" x2="187.33333333333331" y2="148.07558543936938" stroke="black" stroke-width="1" />
+  <rect x="179.53333333333333" y="142.97472756781826" width="15.6" height="3.7792719684674694" fill="red" />
+  <line x1="204.66666666666666" y1="146.6612566658938" x2="204.66666666666666" y2="151.41432877347557" stroke="black" stroke-width="1" />
+  <rect x="196.86666666666667" y="147.12497101785306" width="15.6" height="3.8720148388592293" fill="red" />
+  <line x1="221.99999999999997" y1="147.5886853698122" x2="221.99999999999997" y2="152.9445861349409" stroke="black" stroke-width="1" />
+  <rect x="214.2" y="149.16531416647342" width="15.6" height="1.9012288430327544" fill="green" />
+  <line x1="239.33333333333331" y1="137.54926964989573" x2="239.33333333333331" y2="151.48388592626947" stroke="black" stroke-width="1" />
+  <rect x="231.53333333333333" y="138.36076976582427" width="15.6" height="11.9638302805472" fill="green" />
+  <line x1="256.6666666666667" y1="133.46858335265478" x2="256.6666666666667" y2="141.25898446556926" stroke="black" stroke-width="1" />
+  <rect x="248.86666666666667" y="136.0885694412242" width="15.6" height="1.437514491073557" fill="green" />
+  <line x1="274.0" y1="133.28309761187114" x2="274.0" y2="138.40714120102018" stroke="black" stroke-width="1" />
+  <rect x="266.2" y="134.28008346858337" width="15.6" height="1.3215859030837578" fill="green" />
+  <line x1="291.3333333333333" y1="135.94945513563647" x2="291.3333333333333" y2="139.61279851611408" stroke="black" stroke-width="1" />
+  <rect x="283.5333333333333" y="138.59262694180387" width="15.6" height="1" fill="red" />
+  <line x1="308.6666666666667" y1="135.4625550660794" x2="308.6666666666667" y2="142.26756318108056" stroke="black" stroke-width="1" />
+  <rect x="300.8666666666667" y="136.85369812195694" width="15.6" height="2.643171806167345" fill="green" />
+  <line x1="326.0" y1="134.74379782054262" x2="326.0" y2="138.12891258984467" stroke="black" stroke-width="1" />
+  <rect x="318.2" y="135.7871551124507" width="15.6" height="1.9476002782286628" fill="red" />
+  <line x1="343.3333333333333" y1="137.8738696962671" x2="343.3333333333333" y2="145.58312079758872" stroke="black" stroke-width="1" />
+  <rect x="335.5333333333333" y="138.59262694180387" width="15.6" height="3.8488291212613035" fill="red" />
+  <line x1="360.6666666666667" y1="138.01298400185493" x2="360.6666666666667" y2="146.68444238349184" stroke="black" stroke-width="1" />
+  <rect x="352.8666666666667" y="139.0331555761651" width="15.6" height="3.408300486900089" fill="green" />
+  <line x1="378.0" y1="137.3869696267099" x2="378.0" y2="141.08509158358453" stroke="black" stroke-width="1" />
+  <rect x="370.2" y="138.5810340830049" width="15.6" height="1" fill="red" />
+  <line x1="395.3333333333333" y1="133.99026199860884" x2="395.3333333333333" y2="141.11987015998153" stroke="black" stroke-width="1" />
+  <rect x="387.5333333333333" y="134.97565499652222" width="15.6" height="4.150243450034679" fill="red" />
+  <line x1="412.6666666666667" y1="137.08555529793654" x2="412.6666666666667" y2="141.23579874797122" stroke="black" stroke-width="1" />
+  <rect x="404.8666666666667" y="139.61279851611408" width="15.6" height="1" fill="red" />
+  <line x1="430.0" y1="137.15511245073031" x2="430.0" y2="145.57152793878976" stroke="black" stroke-width="1" />
+  <rect x="422.2" y="139.93739856248555" width="15.6" height="3.825643403663264" fill="red" />
+  <line x1="447.3333333333333" y1="141.4212844887549" x2="447.3333333333333" y2="146.2207280315326" stroke="black" stroke-width="1" />
+  <rect x="439.5333333333333" y="142.51101321585907" width="15.6" height="2.5272432181776026" fill="red" />
+  <line x1="464.6666666666667" y1="147.10178530025502" x2="464.6666666666667" y2="155.33271504753077" stroke="black" stroke-width="1" />
+  <rect x="456.8666666666667" y="149.8840714120102" width="15.6" height="3.2228147461163985" fill="red" />
+  <line x1="482.0" y1="146.70762810108977" x2="482.0" y2="154.16183630883376" stroke="black" stroke-width="1" />
+  <rect x="474.2" y="150.95061442151632" width="15.6" height="2.8750289821470005" fill="green" />
+  <line x1="499.3333333333333" y1="152.13308601901235" x2="499.3333333333333" y2="157.0020867145838" stroke="black" stroke-width="1" />
+  <rect x="491.5333333333333" y="153.5474147924878" width="15.6" height="2.480871782981751" fill="red" />
+  <line x1="516.6666666666666" y1="154.069093438442" x2="516.6666666666666" y2="158.7124971017853" stroke="black" stroke-width="1" />
+  <rect x="508.8666666666666" y="154.91537213076742" width="15.6" height="2.3185717597960434" fill="red" />
+  <line x1="533.9999999999999" y1="153.5242290748899" x2="533.9999999999999" y2="158.9033155576165" stroke="black" stroke-width="1" />
+  <rect x="526.1999999999999" y="156.5615580802226" width="15.6" height="1.0897287271041023" fill="green" />
+  <line x1="551.3333333333333" y1="152.02875028982146" x2="551.3333333333333" y2="156.58474379782052" stroke="black" stroke-width="1" />
+  <rect x="543.5333333333333" y="155.84280083468582" width="15.6" height="1" fill="green" />
+
+<line x1="40" y1="130" x2="600" y2="130" stroke="blue" stroke-width="2" />
+     <text x="605" y="135" font-size="10" fill="blue">Support Level</text>
+</svg>
