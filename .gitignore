@@ -1,2 +1,6 @@
 #Ignore environment variables
 keys.env
+
+#Ignore Questionaire Raw Data
+Data/Analysis/Questionaire/
+    
