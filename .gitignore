@@ -2,5 +2,6 @@
 keys.env
 
 #Ignore Questionaire Raw Data
-Data/Analysis/Questionaire/
+Data/Analysis/Questionaire_Data/
+
     
